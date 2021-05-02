@@ -7,16 +7,17 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    NgxGalleryModule,
     BsDropdownModule.forRoot(),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),
-    TabsModule.forRoot(),
-    NgxGalleryModule
+    TabsModule.forRoot()
   ],
   exports: [
     BsDropdownModule,
