@@ -58,8 +58,13 @@ namespace API
 
             app.UseCors(x => x.AllowAnyHeader()
                 .AllowAnyMethod()
-                .AllowCredentials());
-                //.WithOrigins("https://localhost:4200"));
+                .AllowCredentials()
+                .WithOrigins("https://localhost:4200"));
+
+            app.UseCors(x => x.AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+                .WithOrigins("https://https://super-dating-app.herokuapp.com"));
 
             app.UseAuthentication();
             app.UseAuthorization();
